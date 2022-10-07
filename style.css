@@ -277,6 +277,43 @@ footer .icons {
     margin-top: 0.5rem;
 }
 
+main.about-flex section:first-of-type {
+    width: max(calc(100% - var(--gap) * 2), 100%);
+    background: var(--colorLight);
+}
+
+main.about-flex:not(section:first-of-type) {
+    flex-wrap: wrap;
+}
+
+.baked-cookies {
+    background: url('images/baked-cookies.jpg') no-repeat center center / cover;
+    background-position-y: -280px;
+    padding-top: 300px;
+    border: 10px solid var(--colorLight);
+}
+
+.chocolate-cookies {
+    background: url('images/chocolate-cookies.jpg') no-repeat center center / cover;
+    width: 320px;
+    padding-top: 150%;
+    border: 10px solid var(--colorLight);
+}
+
+.lightbrown-baked-cookies {
+    background: url('images/lightbrown-baked-cookies.jpg') no-repeat center center / cover;
+    width: 320px;
+    padding-top: 150%;
+    border: 10px solid var(--colorLight);
+}
+
+.cookies-with-milk {
+    background: url('images/cookies-with-milk.jpg') no-repeat center center / cover;
+    width: 320px;
+    padding-top: 150%;
+    border: 10px solid var(--colorLight);
+}
+
 @media only screen and (max-width: 1024px) {
     header li:last-child {
         display: none;
@@ -287,14 +324,33 @@ footer .icons {
         width: calc(100% - var(--gap) * 2);
     }
 
-    main section {
+    main.index-flex section {
         flex: 1 0 33%;
     }
 
-    main section:last-child {
+    main.index-flex section:last-child {
         flex-basis: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    main.about-flex {
+        justify-content: center;
+    }
+
+    main.about-flex section:first-of-type {
+        order: 4;
+    }
+
+    main.about-flex section:first-of-type>div {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .chocolate-cookies,
+    .lightbrown-baked-cookies,
+    .cookies-with-milk {
+        width: auto;
     }
 
     .full-height {
@@ -313,6 +369,9 @@ footer .icons {
         border-radius: 0.5rem;
     }
 
+    main.about-flex {
+        flex: 0 1 33%;
+    }
 
     footer {
         flex-wrap: wrap;
@@ -375,6 +434,21 @@ footer .icons {
     .content .icons,
     .content .author {
         margin-top: 1rem;
+    }
+
+    main.about-flex section:first-of-type {
+        width: calc(100vw - 2rem);
+    }
+
+    main.about-flex section:not(:first-child) {
+        display: none;
+    }
+
+
+
+    main.about-flex section:first-of-type>div {
+        background-size: cover;
+        background-position: center;
     }
 
     footer section:nth-child(2) {
