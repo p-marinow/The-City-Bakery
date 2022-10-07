@@ -373,6 +373,33 @@ main.about-flex:not(section:first-of-type) {
         flex: 0 1 33%;
     }
 
+    .card-image {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        border: 2px solid var(--colorDark);
+    }
+
+
+    .card .pastry-mobile {
+        background: url('images/pastry.jpg') no-repeat center center / cover;
+    }
+
+    .card .brown-cookies-mobile {
+        background: url('images/baked-cookies.jpg') no-repeat center center / cover;
+    }
+
+    .card .cookies-mobile {
+        background: url('images/cookies.jpg') no-repeat center center / cover;
+    }
+
+    .card .cookies-with-milk-mobile {
+        background: url('images/cookies-with-milk.jpg') no-repeat center -2.5rem / cover;
+    }
+
+    .card .lightbrown-baked-cookies-mobile {
+        background: url('images/lightbrown-baked-cookies.jpg') no-repeat center -2.8rem / cover;
+    }
+
     footer {
         flex-wrap: wrap;
         width: calc(100% - var(--gap) * 2);
@@ -483,6 +510,30 @@ main.about-flex:not(section:first-of-type) {
     .worktime li:nth-child(even) {
         text-align: left;
     }
+
+    main.menu-flex {
+        flex: 1 0 100%;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .card {
+        width: calc(100vw - 1rem * 2);
+        height: 100%;
+        aspect-ratio: 1 / 0.5;
+        background: var(--colorLight);
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card>div {
+        display: flex;
+        flex: 1 0 50%;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -493,6 +544,54 @@ main.about-flex:not(section:first-of-type) {
     footer section:nth-child(3) {
         padding-top: 1rem;
         flex: 100%;
+    }
+
+    .menu-flex {
+        gap: 1rem;
+    }
+
+    .card>div:first-child {
+        flex-basis: 25%;
+        font-size: 1.7rem;
+        text-decoration: underline;
+        text-decoration-color: var(--colorDark);
+        color: var(--colorDark);
+    }
+
+    .card .product-name {
+        margin-left: -1rem;
+        margin-bottom: -1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--colorDark);
+    }
+
+    .card .description {
+        padding-right: .8rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--colorDark);
+    }
+
+    .card-image {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        border: 2px solid var(--colorDark);
+    }
+
+    .ingredients {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    .ingr-logo {
+        background: url('images/ingredients.png');
+        width: 32px;
+        height: 32px;
+        margin: 0 0.5rem;
     }
 }
 
@@ -537,6 +636,36 @@ main.about-flex:not(section:first-of-type) {
     .content {
         margin-top: initial;
     }
+
+
+    .card>div:first-child {
+        flex-basis: 25%;
+        font-size: 1.3rem;
+        text-decoration: underline;
+        text-decoration-color: var(--colorDark);
+        color: var(--colorDark);
+    }
+
+    .card .product-name {
+        margin-left: -1rem;
+        margin-bottom: -1rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--colorDark);
+    }
+
+    .card .description {
+        padding-right: .8rem;
+        font-size: .8rem;
+        font-style: italic;
+        color: var(--colorDark);
+        line-height: 1rem;
+    }
+
+    .ingredients {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -552,6 +681,7 @@ main.about-flex:not(section:first-of-type) {
         border-right: none;
     }
 
+    /* 
     main.menu-flex {
         flex: 1 0 100%;
         flex-flow: column wrap;
@@ -594,13 +724,6 @@ main.about-flex:not(section:first-of-type) {
         color: var(--colorDark);
     }
 
-    .card .description {
-        padding-right: .8rem;
-        font-size: .8rem;
-        font-style: italic;
-        color: var(--colorDark);
-    }
-
     .card-image {
         width: 80%;
         aspect-ratio: 1 / 1;
@@ -625,5 +748,5 @@ main.about-flex:not(section:first-of-type) {
 
     .card .lightbrown-baked-cookies-mobile {
         background: url('images/lightbrown-baked-cookies.jpg') no-repeat center -2.8rem / cover;
-    }
+    } */
 }
