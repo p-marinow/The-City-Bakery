@@ -87,7 +87,6 @@ header.appendChild(nav);
 
 function renderIndex() {
     document.querySelectorAll('main>section').forEach((section) => section.remove());
-
     const leftCol = document.createElement('section');
     leftCol.classList.add('full-height');
     leftCol.appendChild(document.createElement('div')).classList.add('pastry');

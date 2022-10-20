@@ -229,6 +229,7 @@ h1 {
 main.menu-flex {
     flex: 1 0 100%;
     flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .menu-flex {
